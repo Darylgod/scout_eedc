@@ -1,0 +1,201 @@
+/* ============================================
+   HERO STYLES - EEDC
+============================================ */
+
+/* ── Hero principal (Accueil) ── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-dark) 60%, var(--bleu-deeper) 100%);
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-height);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(212,160,23,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(26,122,74,0.06) 0%, transparent 50%);
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(212,160,23,0.3);
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212,160,23,0.15);
+  color: var(--or);
+  border: 1px solid rgba(212,160,23,0.3);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-titre);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--blanc);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 .accent {
+  color: var(--or);
+  position: relative;
+}
+
+.hero-desc {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(212,160,23,0.15);
+  animation: spin 20s linear infinite;
+}
+
+.hero-logo-ring-2 {
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  border: 1px dashed rgba(212,160,23,0.1);
+  animation: spin 15s linear infinite reverse;
+}
+
+.hero-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 12px 40px rgba(0,0,0,0.4));
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero petite (pages internes) ── */
+.page-hero {
+  background: var(--bleu);
+  padding: calc(var(--nav-height) + 3rem) 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 50px solid rgba(212,160,23,0.06);
+}
+
+.page-hero .breadcrumb {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+}
+
+.page-hero .breadcrumb span {
+  color: var(--or);
+}
+
+.page-hero h1 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 900;
+  color: var(--blanc);
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .hero-inner { flex-direction: column; text-align: center; gap: 2rem; }
+  .hero-desc { margin: 0 auto 2rem; }
+  .hero-btns { justify-content: center; }
+  .hero-logo-wrapper { width: 200px; height: 200px; }
+  .hero-logo { width: 150px; height: 150px; }
+}

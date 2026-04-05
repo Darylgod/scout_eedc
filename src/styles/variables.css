@@ -1,0 +1,79 @@
+/* ============================================
+   EEDC — Variables CSS globales
+   Charte graphique officielle
+============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ── Couleurs principales ── */
+  --bleu: #003087;
+  --bleu-dark: #001f5c;
+  --bleu-deeper: #001040;
+  --bleu-light: #EBF0FF;
+  --or: #D4A017;
+  --or-dark: #B8860B;
+  --or-light: #FFF3CD;
+  --vert: #1A7A4A;
+  --vert-dark: #0f4f2f;
+  --vert-light: #D4EDDA;
+  --rouge: #CC0000;
+  --rouge-dark: #990000;
+  --rouge-light: #FFE5E5;
+
+  /* ── Neutres ── */
+  --blanc: #ffffff;
+  --gris-clair: #F5F7FA;
+  --gris-moyen: #E4E7EC;
+  --gris-fonce: #667085;
+  --texte: #1A1A2E;
+  --texte-light: #475467;
+  --footer-bg: #001a50;
+
+  /* ── Branches ── */
+  --louveteaux: #FFD93D;
+  --eclaireurs: #1A7A4A;
+  --pionniers: #003087;
+  --routiers: #CC0000;
+
+  /* ── Typographie ── */
+  --font-titre: 'Montserrat', sans-serif;
+  --font-corps: 'Open Sans', sans-serif;
+
+  /* ── Espacements ── */
+  --rayon: 8px;
+  --rayon-lg: 12px;
+  --rayon-xl: 20px;
+  --rayon-2xl: 24px;
+  --ombre: 0 4px 24px rgba(0, 48, 135, 0.08);
+  --ombre-lg: 0 8px 40px rgba(0, 48, 135, 0.14);
+  --ombre-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --ombre-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+  /* ── Layout ── */
+  --max-width: 1280px;
+  --nav-height: 80px;
+  --section-py: 80px;
+
+  /* ── Transitions ── */
+  --transition: 0.3s ease;
+  --transition-lg: 0.5s ease;
+
+  /* ── Z-index ── */
+  --z-navbar: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+    --section-py: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --nav-height: 60px;
+    --section-py: 50px;
+  }
+}

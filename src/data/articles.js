@@ -1,0 +1,32 @@
+export const articles = [
+  {
+    id: 1,
+    slug: 'premier-camp-regional-eedc',
+    titre: '1er Camp Régional EEDC — Retour en images',
+    extrait: 'Pendant 5 jours, 120 scouts venus de tout le Cameroun ont partagé activités, défis et fraternité.',
+    categorie: 'Camp',
+    date: '2026-06-20',
+    image: null,
+    vedette: true,
+  },
+  {
+    id: 2,
+    slug: 'investiture-45-scouts',
+    titre: "Cérémonie d'investiture : 45 nouveaux scouts",
+    extrait: 'Dans une atmosphère solennelle, 45 jeunes ont prêté la Promesse scoute.',
+    categorie: 'Cérémonie',
+    date: '2026-03-15',
+    image: null,
+    vedette: false,
+  },
+  {
+    id: 3,
+    slug: 'quinzaine-environnement',
+    titre: 'Quinzaine de l\'environnement — 300 arbres plantés',
+    extrait: 'Les scouts EEDC s\'engagent pour l\'ODD 13 avec une action de plantation massive.',
+    categorie: 'ODD',
+    date: '2026-05-10',
+    image: null,
+    vedette: false,
+  },
+]

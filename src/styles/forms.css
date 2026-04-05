@@ -1,0 +1,76 @@
+/* ============================================
+   EEDC — Formulaires
+============================================ */
+.form-section {
+  background: var(--gris-clair);
+  border-radius: var(--rayon-xl);
+  padding: 2.5rem;
+}
+
+.form-title {
+  font-family: var(--font-titre);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--bleu);
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row.full {
+  grid-template-columns: 1fr;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texte-light);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: var(--blanc);
+  border: 1.5px solid var(--gris-moyen);
+  border-radius: var(--rayon);
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--texte);
+  font-family: var(--font-corps);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--bleu);
+  box-shadow: 0 0 0 3px rgba(0,48,135,0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}

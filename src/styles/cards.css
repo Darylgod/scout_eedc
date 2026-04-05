@@ -1,0 +1,401 @@
+/* ============================================
+   CARDS STYLES - EEDC
+============================================ */
+
+/* ── Card branche ── */
+.branch-card {
+  background: var(--blanc);
+  border: 1.5px solid var(--gris-moyen);
+  border-radius: var(--rayon-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+
+.branch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--ombre-lg);
+  border-color: var(--or);
+}
+
+.branch-card-img {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.branch-card-body {
+  padding: 1.2rem;
+}
+
+.branch-card-name {
+  font-family: var(--font-titre);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--bleu);
+  margin-bottom: 4px;
+}
+
+.branch-card-age {
+  font-size: 11px;
+  color: var(--gris-fonce);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.branch-card-desc {
+  font-size: 13px;
+  color: var(--texte-light);
+  line-height: 1.6;
+}
+
+.branch-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--vert);
+  border-bottom: 1px solid var(--vert);
+  transition: gap var(--transition);
+}
+
+.branch-card:hover .branch-card-link { gap: 8px; }
+
+/* ── Card actu (CORRIGÉE) ── */
+.actu-card {
+  background: var(--blanc);
+  border: 1px solid var(--gris-moyen);
+  border-radius: var(--rayon-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.actu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ombre-lg);
+}
+
+/* Conteneur de l'image - CORRIGÉ */
+.actu-card-img {
+  width: 100%;
+  height: 200px;
+  background-color: var(--gris-clair);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Style pour l'image - CRITIQUE */
+.actu-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.actu-card:hover .actu-card-img img {
+  transform: scale(1.05);
+}
+
+/* Fallback quand pas d'image */
+.actu-card-img .no-image-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  background-color: var(--gris-clair);
+}
+
+/* Corps de la carte */
+.actu-card-body {
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--blanc);
+}
+
+.actu-card-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--vert);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.actu-card-title {
+  font-family: var(--font-titre);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--bleu);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actu-card-excerpt {
+  font-size: 13px;
+  color: var(--texte-light);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actu-card-date {
+  font-size: 12px;
+  color: var(--gris-fonce);
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--gris-moyen);
+}
+
+/* ── Card témoignage ── */
+.temoignage-card {
+  background: var(--blanc);
+  border: 1px solid var(--gris-moyen);
+  border-left: 4px solid var(--or);
+  border-radius: var(--rayon-lg);
+  padding: 1.5rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.temoignage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ombre-lg);
+}
+
+.temoignage-texte {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--texte-light);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.temoignage-auteur {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.temoignage-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titre);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blanc);
+  flex-shrink: 0;
+}
+
+.temoignage-nom {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--bleu);
+}
+
+.temoignage-role {
+  font-size: 11px;
+  color: var(--gris-fonce);
+  margin-top: 2px;
+}
+
+/* Styles pour la modale */
+.modal-body {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.modal-body img {
+  max-width: 100%;
+  border-radius: var(--rayon);
+}
+
+.modal-description {
+  margin-top: 1rem;
+  color: var(--texte-light);
+}
+
+.galerie-meta {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--gris-fonce);
+}
+
+.no-image-modal-icon {
+  font-size: 5rem;
+  opacity: 0.5;
+}
+
+/* Animation reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   CARROUSEL POUR LA GALERIE
+============================================ */
+
+.modal-carousel {
+  max-width: 800px;
+  width: 90%;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gris-clair);
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: var(--rayon);
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.carousel-thumbnails {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.carousel-thumbnails .thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.carousel-thumbnails .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-thumbnails .thumbnail.active {
+  border-color: var(--or);
+  transform: scale(1.05);
+}
+
+.carousel-thumbnails .thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.modal-description {
+  margin-top: 1rem;
+  color: var(--texte-light);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-prev,
+  .carousel-next {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  .carousel-thumbnails .thumbnail {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .modal-carousel {
+    width: 95%;
+  }
+  
+  .carousel-image {
+    max-height: 300px;
+  }
+}
+
